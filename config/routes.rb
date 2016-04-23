@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+  root to: 'pages#index'
 
-  get 'home' => 'home#index'
-  get 'main' => 'home#index'
-  get 'home/about'
-  get 'home/license'
-  get 'home/contact'
+  get 'about' => 'pages#about'
+  get 'show' => 'page#show'
+  get 'contact' => 'pages#contact'
+  
+  get 'blog' => 'blog#index'
+  get 'blogpost' => 'blog#show'
   
 end
